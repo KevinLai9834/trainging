@@ -77,11 +77,9 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+		Log.d("TAG","123123")	
 		Log.d("TAG","ttttt")
         log_defin();//定義
-        log_rem_pw_checkbox(); //記住密碼
-//        log_auto_login_checkbox(); //自動登入
         log_txtforgetpw();//忘記密碼
         log_registe();//註冊
         log_login();//登入
