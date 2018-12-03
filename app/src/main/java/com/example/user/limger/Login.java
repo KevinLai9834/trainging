@@ -78,30 +78,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        jobDispatcher = new FirebaseJobDispatcher(new GooglePlayDriver(this));
-
-        //title字體顏色設定
-        actionBar = getSupportActionBar();
-        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FFA38473")));
-        View viewActionBar = getLayoutInflater().inflate(R.layout.title, null);
-        ActionBar.LayoutParams params = new ActionBar.LayoutParams(//Center the textview in the ActionBar !
-                ActionBar.LayoutParams.WRAP_CONTENT,
-                ActionBar.LayoutParams.MATCH_PARENT,
-                Gravity.CENTER);
-        TextView textviewTitle = (TextView) viewActionBar.findViewById(R.id.actionbar_textview);
-
-
-        textviewTitle.setText("Limger");
-        actionBar.setCustomView(viewActionBar, params);
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setDisplayShowTitleEnabled(false);
-//        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeButtonEnabled(true);
-
-        log_memberRef = FirebaseDatabase.getInstance().getReference("member");
-        firebaseAuth = FirebaseAuth.getInstance();
-
-
+		Log.d("TAG","ttttt")
         log_defin();//定義
         log_rem_pw_checkbox(); //記住密碼
 //        log_auto_login_checkbox(); //自動登入
